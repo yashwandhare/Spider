@@ -14,9 +14,11 @@ body {
     align-items: center;
     padding: 10px 45px;
     font-size: 4mm;
+    position: relative;
 }
 
-.topbar h1 {
+/* Main title or logo styles */
+.box h1 {
     position: relative;
     color: #000000;
     padding: 10px;
@@ -24,8 +26,8 @@ body {
     transition: background-color 0.2s ease, color 0.2s ease, transform 0.2s ease;
 }
 
-.topbar h1::before,
-.topbar h1::after {
+.box h1::before,
+.box h1::after {
     content: '';
     position: absolute;
     top: 0;
@@ -36,9 +38,7 @@ body {
     box-sizing: border-box;
 }
 
-.topbar h1::before {
-    content: '';
-    position: absolute;
+.box h1::before {
     top: 7px;
     left: 7px;
     border: 2px solid #000000;
@@ -47,6 +47,11 @@ body {
 .box h1:hover {
     background-color: rgb(25, 25, 25);
     color: rgb(255, 255, 255);
+}
+
+/* Navigation links styles */
+.nav-links {
+    display: flex;
 }
 
 .nav-links ul {
@@ -67,8 +72,73 @@ body {
 }
 
 .nav-links a:hover {
-    background-color: rgb(25,25,25);
+    background-color: rgb(25, 25, 25);
     color: white;
+}
+
+/* Menu toggle for mobile */
+.menu-toggle-checkbox {
+    display: none;
+}
+
+/* Toggle button */
+.menu-toggle-label {
+    display: none;
+    font-size: 6mm;
+    background: none;
+    border: none;
+    color: #000000;
+    cursor: pointer;
+}
+
+/* Mobile menu styles */
+.nav-links {
+    display: flex;
+    transition: max-height 0.3s ease;
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+    .menu-toggle-label {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        right: 0;
+        background-color: #f9f9f9;
+        width: 100%;
+        box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        z-index: 1000;
+        flex-direction: column;
+        padding: 0;
+    }
+
+    .menu-toggle-checkbox:checked ~ .nav-links {
+        display: flex;
+    }
+
+    .nav-links ul {
+        flex-direction: column;
+    }
+
+    .nav-links li {
+        margin: 0;
+    }
+
+    .nav-links a {
+        padding: 15px;
+        display: block;
+        text-align: center;
+        font-size: 5mm;
+    }
+
+    .nav-links a:hover {
+        background-color: rgb(25, 25, 25);
+        color: white;
+    }
 }
 
 /* Main Content (Hero Section) */
@@ -368,9 +438,7 @@ body {
     height: auto;
 }
 
-/* Responsive Adjustments */
-
-/* Mobile adjustments for the hero section */
+/* Mobile adjustments for the Extra Content section */
 @media (max-width: 768px) {
     .maincontent {
         flex-direction: column;
@@ -411,10 +479,7 @@ body {
         flex: 0 0 100%;
         max-width: 50%; /* Halve the image size on mobile */
     }
-}
-
-/* Mobile adjustments for the Extra Content section */
-@media (max-width: 768px) {
+    
     .extracontent {
         flex-direction: column;
         align-items: stretch;
