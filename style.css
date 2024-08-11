@@ -2,7 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;700&display=swap');
 body {
     font-family: monospace;
-    background-color: rgb(255, 250, 230);
+    background-color: #f9f9f9;
     margin: 0;
     padding: 0;
 }
@@ -209,7 +209,7 @@ body {
 }
 
 .review-box {
-    background-color: rgb(255, 250, 230);
+    background-color: #f9f9f9;
     color: #222; 
     border: 1px solid #000; 
     padding: 6mm; 
