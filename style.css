@@ -148,7 +148,7 @@ body {
     justify-content: space-between;
     max-width: 1200px; 
     margin: 0 auto;
-    padding: 20px 20px;
+    padding: 20px 80px 20px 80px;
 }
 
 .text-content {
@@ -184,6 +184,44 @@ body {
     color: rgb(0, 0, 0);
 }
 
+.image-content {
+    flex: 1;
+    max-width: 400px; 
+    margin-left: 20px;
+    color: #252525;
+}
+
+.image-content img {
+    width: 100%;
+    height: auto; 
+    max-width: 100%;
+}
+
+/* Mobile adjustments for the Hero Section */
+@media (max-width: 768px) {
+    .maincontent {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px; 
+    }
+
+    .text-content {
+        max-width: 100%;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    .image-content {
+        max-width: 100%; 
+        margin-top: 30px;
+        padding-left: 80px;
+    }
+
+    .image-content img {
+        width: 80%; 
+    }
+}
+
 /* Extra content Section */
 .extracontent {
     display: flex;
@@ -191,7 +229,7 @@ body {
     align-items: flex-start;
     max-width: 1200px;
     margin: 40px auto;
-    padding: 20px;
+    padding: 20px 80px 20px 80px;
 }
 
 /* Features section */
@@ -372,7 +410,7 @@ body {
 }
 
 .logo-box:hover{
-    background-color: rgb(135, 150, 230);
+    background-color: #5000ff;
     transform: scale(1.1);
 }
 
@@ -401,6 +439,7 @@ body {
     justify-content: space-between;
     background-color: #7289da;
     padding: 20px 80px 20px 80px;
+    margin-top: 60px;
 }
 
 .community-text {
@@ -434,8 +473,9 @@ body {
 
 .community-img {
     flex: 0 0 20%;
-    max-width: 100px; 
+    max-width: 69px; 
     height: auto;
+    padding-right: 80px;
 }
 
 /* Mobile adjustments for the Extra Content section */
@@ -465,21 +505,23 @@ body {
     }
 
     .community-section {
-        flex-direction: column;
+        flex-direction: row; /* Align items horizontally */
         align-items: center;
-        padding: 20px 20px; /* Adjust padding for mobile */
+        padding: 20px; /* Adjust padding for mobile */
+        text-align: center; /* Center text */
     }
 
     .community-text {
-        flex: 0 0 100%;
-        text-align: center;
+        flex: 1; /* Allow the text to take available space */
+        margin-right: 10px; /* Space between text and image */
     }
 
     .community-img {
-        flex: 0 0 100%;
-        max-width: 50%; /* Halve the image size on mobile */
+        max-width: 15%; /* Adjust the size of the image on mobile */
+        height: auto;
+        margin-left: 10px; /* Space between image and text */
     }
-    
+
     .extracontent {
         flex-direction: column;
         align-items: stretch;
@@ -514,8 +556,7 @@ body {
     }
 
     .links a {
-        font-size: 3mm; /* Adjust font size for mobile */
+        font-size: 3.5mm; /* Adjust font size for mobile */
     }
 }
 
-   
