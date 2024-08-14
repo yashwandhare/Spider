@@ -27,7 +27,7 @@ To view the website locally:
 
 ## How to contribute  
 
-If you have suggestions for new recipes or improvements, feel free to fork the repository and submit a pull request. Contributions are welcome!
+If you have suggestions for improvements, feel free to fork the repository and submit a pull request. Contributions are welcome!
 
 ## License
 
